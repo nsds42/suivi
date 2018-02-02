@@ -1,3 +1,27 @@
 index:
     path: /
     controller: App\Controller\HomeController::index
+
+anomalie:
+    path: /anomalie
+    controller: App\Controller\AnomalieController::index
+
+assistance:
+    path: /assistance
+    controller: App\Controller\AssistanceController::index
+
+DM3:
+    path: /DM3
+    controller: App\Controller\DM3Controller::index
+
+Oceane:
+    path: /oceane
+    controller: App\Controller\OceaneController::index
+
+qualification:
+    path: /qualification
+    controller: App\Controller\QualificationController::index
+
+parametrage:
+    path: /parametrage
+    controller: App\Controller\ParametrageController::index
