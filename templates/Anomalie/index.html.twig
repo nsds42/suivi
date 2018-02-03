@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+{{ form_start(form) }}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+  <h1 class="h2">Anomalies</h1>
+</div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Ajouter
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter une anomalie</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group
+      {{form_label(form.dateCreation)}}
+      {{ form_widget(form.dateCreation, { 'attr': {'class': 'form-control input-inline'}})}}
+      <div class="row">
+        <div class="col">
+          {{ form_label(form.numShp)}}
+          {{ form_widget(form.numShp, { 'attr': {'class': 'form-control input-inline'}})}}
+        </div>
+        <div class="col">
+          {{ form_label(form.numOceane)}}
+          {{ form_widget(form.numOceane, { 'attr': {'class': 'form-control input-inline'}})}}
+        </div>
+      </div>
+      {{form_label(form.description)}}
+      {{ form_widget(form.description, { 'attr': {'class': 'form-control input-inline'}})}}
+      {{form_label(form.versionAno)}}
+      {{ form_widget(form.versionAno, { 'attr': {'class': 'form-control input-inline'}})}}
+      {{form_label(form.garantieVSR)}}
+      {{ form_widget(form.garantieVSR, { 'attr': {'class': 'form-control input-inline'}})}}
+      <div class="row">
+        <div class="col">
+          {{ form_label(form.valReformulation)}}
+          {{ form_widget(form.valReformulation, { 'attr': {'class': 'form-control input-inline'}})}}
+        </div>
+        <div class="col">
+          {{ form_label(form.dateReformulation)}}
+          {{ form_widget(form.dateReformulation, { 'attr': {'class': 'form-control input-inline'}})}}
+        </div>
+      </div>
+      {{form_label(form.developpeur)}}
+      {{ form_widget(form.developpeur, { 'attr': {'class': 'form-control input-inline'}})}}
+      {{form_label(form.versionCorrectif)}}
+      {{ form_widget(form.versionCorrectif, { 'attr': {'class': 'form-control input-inline'}})}}
+      {{form_label(form.dateQualMOA)}}
+      {{ form_widget(form.dateQualMOA, { 'attr': {'class': 'form-control input-inline'}})}}
+      {{form_label(form.dateResolution)}}
+      {{ form_widget(form.dateResolution, { 'attr': {'class': 'form-control input-inline'}})}}
+      {{form_label(form.commentaire)}}
+      {{ form_widget(form.commentaire, { 'attr': {'class': 'form-control input-inline'}})}}
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{ form_end(form) }}
+{% endblock %}
